@@ -13,4 +13,7 @@ def list(direc):
         break
 
 def copy(src, dest):
-    shutil.copyfile(src, dest)
+    shutil.copy(src, dest)
+
+def move(src,dest):
+    shutil.move(src, dest)
