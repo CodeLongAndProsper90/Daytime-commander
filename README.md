@@ -1,9 +1,4 @@
-# Daytime-commander
+# Daytime Commander
 
-A list
-* 1
-* 2
-* 3
-
-## Header 2
+## A command line file explorer.
 
