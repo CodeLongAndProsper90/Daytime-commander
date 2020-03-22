@@ -12,4 +12,8 @@ while True:
       print("E: Argument mismatch: c <src> <dest>")
     else:
       copy(line[1], line[2])
-
+  if line[0] == 'm':
+    if len(line) != 3:
+      print("E: Argument mismatch: m <src> <dest>")
+    else:
+      move(line[1], line[2])
