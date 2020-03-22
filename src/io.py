@@ -6,7 +6,7 @@ import sys
 from os import walk
 from os import remove
 import shutil
-def list():
+def List():
   files = []
   for (dirpath, dirnames, filenames) in walk(direc):
     files.extend(filenames)

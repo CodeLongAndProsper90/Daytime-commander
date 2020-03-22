@@ -1,15 +1,15 @@
-import io
+from io import * 
 
 while True:
-  line = raw_input("$ ").split(" ")
+  line = input("$ ").split(" ")
   if line[0] == 'l':
     if len(line) < 3:
       continue
     else:
       if len(line) == 1:
-       io.list('.')
+       List('.')
       else:
-        io.list(line[1])
+        List(line[1])
   if line[0] == 'c':
     if len(line) != 3:
       print("E: Argument mismatch: c <src> <dest>")
