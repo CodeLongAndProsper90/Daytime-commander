@@ -27,4 +27,6 @@ while True:
     else:
       c = input("Are you sure? <y/N>: ")
       if c.lower() == 'y':
-        io.delete(line[0])
+        e = io.delete(line[0])
+        if e == 1:
+          print(f"E: {line[0]}: No such file or directory")

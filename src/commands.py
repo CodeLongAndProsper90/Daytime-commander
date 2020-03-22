@@ -26,4 +26,8 @@ def move(src, dest):
   else:
     return 1
 def delete(src):
-  remove(src)
+  if os.path.exists(src):
+    remove(src)
+    return 0
+  else:
+    return 1
