@@ -12,4 +12,6 @@ for (dirpath, dirnames, filenames) in walk(sys.argv[-1]):
 
 def copy(src, dest):
   import shutil
-  shutil.copyfile(src, dest)
+  shutil.copy(src, dest)
+
+def move
