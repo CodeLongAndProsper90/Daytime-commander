@@ -1,4 +1,4 @@
-import io
+import commands as io
 while True:
   line = input("$ ").split(" ")
   if line[0] == 'l':
@@ -18,7 +18,9 @@ while True:
     if len(line) != 3:
       print("E: Argument mismatch: m <src> <dest>")
     else:
-      io.move(line[1], line[2])
+      e = io.move(line[1], line[2])
+      if e == 1:
+        print(f"{line[0+1]}: No such file or directory")
   if line[0] == 'd':
     if len(line) != 2:
       print("E: Argument mismatch: d <file>")

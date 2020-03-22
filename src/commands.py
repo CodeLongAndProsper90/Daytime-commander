@@ -6,6 +6,7 @@ import sys
 from os import walk
 from os import remove
 import shutil
+import os.path
 def List():
   files = []
   for (dirpath, dirnames, filenames) in walk(direc):
@@ -13,14 +14,16 @@ def List():
     break
 
 def copy(src, dest):
-  shutil.copy(src, dest)
-
+  if os.path.exists(src):
+    shutil.copy(src, dest)
+    return 0
+  else:
+    return 1
 def move(src, dest):
- shutil.move(src, dest)
-
+  if os.path.exists(src):
+    shutil.move(src, dest)
+    return 0
+  else:
+    return 1
 def delete(src):
   remove(src)
-if __name__=='__main__':
-  copy('test.data', 'test.txt')
-  move('test.txt', 'hello.txt')
-  delete('test.txt')
