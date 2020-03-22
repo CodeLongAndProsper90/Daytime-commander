@@ -6,7 +6,10 @@ while True:
     if len(line) < 3:
       continue
     else:
-       io.list()
+      if len(line) == 1:
+       io.list('.')
+      else:
+        io.list(line[1])
   if line[0] == 'c':
     if len(line) != 3:
       print("E: Argument mismatch: c <src> <dest>")
