@@ -20,3 +20,10 @@ while True:
       print("E: Argument mismatch: m <src> <dest>")
     else:
       move(line[1], line[2])
+  if line[0] == 'd':
+    if len(line) != 2:
+      print("E: Argument mismatch: d <file>")
+    else:
+      c = input("Are you sure? <y/N>: ")
+      if c.lower() == 'y':
+        delete(line[0])
